@@ -4,8 +4,8 @@ set -e
 # SPIP Restore Script
 # Restores images and database from remote archives
 
-read -rp "Enter the IMG archive URL: " IMG_URL
-read -rp "Enter the database dump URL: " DUMP_URL
+read -rp "Enter the IMG archive URL: " IMG_URL < /dev/tty
+read -rp "Enter the database dump URL: " DUMP_URL < /dev/tty
 
 if [[ -z "$IMG_URL" || -z "$DUMP_URL" ]]; then
     echo "Error: Both URLs are required."
